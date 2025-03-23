@@ -23,7 +23,7 @@ function AuthPage() {
       <div className="flex flex-col items-center gap-8 rounded-xl border bg-card p-10">
         Logo here
         <div className="flex flex-col gap-2">
-          <SignInButton
+          {/* <SignInButton
             provider="discord"
             label="Discord"
             className="bg-[#5865F2] hover:bg-[#5865F2]/80"
@@ -32,7 +32,7 @@ function AuthPage() {
             provider="github"
             label="GitHub"
             className="bg-neutral-700 hover:bg-neutral-700/80"
-          />
+          /> */}
           <SignInButton
             provider="google"
             label="Google"
