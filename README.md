@@ -7,6 +7,7 @@ A minimal starter template for 🏝️ TanStack Start.
 - [Tailwind CSS v4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
 - [Drizzle ORM](https://orm.drizzle.team/) + PostgreSQL
 - [Better Auth](https://www.better-auth.com/)
+- [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) + [Playwright](https://playwright.dev/)
 
 ## Getting Started
 
@@ -67,6 +68,50 @@ These scripts in [package.json](./package.json#L5) use **pnpm** by default, but 
 ## Building for production
 
 Read the [hosting docs](https://tanstack.com/start/latest/docs/framework/react/hosting) for information on how to deploy your TanStack Start app.
+
+## Testing
+
+This project uses a comprehensive testing setup:
+
+### Unit and Integration Tests
+
+[Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) is used for unit and integration tests.
+
+```bash
+# Run all tests
+pnpm test
+
+# Watch mode during development
+pnpm test:watch
+
+# Interactive UI for test results
+pnpm test:ui
+
+# Generate coverage report
+pnpm test:coverage
+```
+
+### End-to-End Tests
+
+[Playwright](https://playwright.dev/) is used for end-to-end browser testing.
+
+```bash
+# Install Playwright browsers (run once)
+npx playwright install
+
+# Run all e2e tests
+pnpm test:e2e
+
+# Run with interactive UI
+pnpm test:e2e:ui
+```
+
+### Test Structure
+
+- Unit/Integration tests: `src/**/*.test.{ts,tsx}`
+- E2E tests: `e2e/**/*.spec.ts`
+
+See the [src/lib/test](./src/lib/test) directory for test utilities and examples.
 
 ## Acknowledgements
 

@@ -17,3 +17,10 @@ dist
 /api/
 /server/build
 /public/build
+
+# Ignore coverage and playwright report folders
+playwright-report/*
+coverage/*
+
+# Ignore trace files
+trace.zip
